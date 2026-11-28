@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b7twmv304ixb5"]
+
+[ext_resource type="Script" uid="uid://cro161rhn14di" path="res://scripts/objects/machine_interaction_area.gd" id="1_76xwr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pj0hq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_htemk"]
+size = Vector2(64, 64)
+
+[node name="Machine" type="StaticBody2D" unique_id=1783957595]
+collision_layer = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=640579297]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=720937620]
+shape = SubResource("RectangleShape2D_pj0hq")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1411711151]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_76xwr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=208397454]
+shape = SubResource("RectangleShape2D_htemk")
